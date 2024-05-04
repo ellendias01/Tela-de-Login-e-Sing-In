@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 12 - Componentes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+        </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="intro">
+        <div class="box" >
+            <div class="nome">
+                {{ buttonTextPrefix }}
+        <button @click="alterarComponentes" class="botao">{{ buttonText }}</button> </div><!--nome-->
+        <transition name="fade" mode="out-in">
+            <component :is="componenteAtual"></component>
+        </transition>
+
+    </div><!--box--></div>
+    </div><!--app-->
+</body>
+
+</html>
+<script src="index.js"></script>
